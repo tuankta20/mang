@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Distionary</title>
+</head>
+<body>
+<h1><u>Distionary</u></h1>
+<h3></h3>
+<form>
+<input id="nhap">
+<input  value="Ok" type="button" onclick="distionary()">
+    <p id="ketqua"></p>
+<script>
+
+  function distionary() {
+      let nhaptu = ["dog","cow","pig","chicken","elephants","bird","tiger","Panther","fish"]
+      let dich = ["chó","ngựa","lợn","gà","voi","chim","hổ","báo","cá"];
+      let a = document.getElementById("nhap").value;
+      let count = 0;
+      let check = false;
+     for (i=0;i<nhaptu.length - 1;i++){
+         if (a == nhaptu[i]){
+             count = i;
+             check = true;
+             break;
+         }
+     }
+     if (check){
+         document.getElementById("ketqua").innerHTML = dich[count];
+     }
+     else {
+         document.getElementById("ketqua").innerHTML = "khong thay";
+     }
+
+
+  }
+</script>
+</form>
+</body>
+</html>
